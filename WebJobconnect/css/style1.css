@@ -1,0 +1,17 @@
+.formlogin input{
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #dc3545;
+    border-radius: 15px;
+}
+.formlogin input:focus{
+    margin: 10px;
+    outline: none;
+}
+.formlogin{
+    width: auto;
+    height: auto;
+    border: 2px dotted white;
+}

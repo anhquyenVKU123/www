@@ -1,0 +1,120 @@
+RewriteEngine On
+
+RewriteRule ^home$ /index.php [NC,L,QSA]
+RewriteRule ^home/dang-nhap$ /WebJobconnect/FormLogin.php [NC,L,QSA]
+RewriteRule ^home/dang-ki$ /WebJobconnect/FormSignup.php [NC,L,QSA]
+RewriteRule ^home/danh-sach-nganh-linh-vuc$ /WebJobconnect/listIndustries.php [NC,L,QSA]
+RewriteRule ^home/danh-sach-nganh-linh-vuc/thong-tin-chi-tiet/(.*)$ /WebJobconnect/detailIndustry.php?IDIndus=$1 [NC,L,QSA]
+RewriteRule ^home/danh-sach-nha-tuyen-dung$ /WebJobconnect/listEmployer.php [NC,L,QSA]
+RewriteRule ^home/danh-sach-nha-tuyen-dung/thong-tin-chi-tiet/(.*)$ /WebJobconnect/detailEmp.php?IDEmp=$1 [NC,L,QSA]
+RewriteRule ^home/danh-sach-tin-tuyen-dung$ /WebJobconnect/listRecruitment.php? [NC,L,QSA]
+RewriteRule ^home/danh-sach-tin-tuyen-dung/thong-tin-chi-tiet/(.*)$ /WebJobconnect/detailRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^home/danh-sach-tin-tuc$ /WebJobconnect/listNews.php [NC,L,QSA]
+RewriteRule ^home/danh-sach-tin-tuc/noi-dung/(.*)$ /WebJobconnect/news.php?IDNews=$1 [NC,L,QSA]
+
+
+
+RewriteRule ^home/dang-nhap/xu-li$ /WebJobconnect/process_login.php [NC,L,QSA]
+RewriteRule ^home/dang-nhap/(.*)$ /WebJobconnect/FormLogin.php?error=$1 [NC,L,QSA]
+RewriteRule ^home/dang-ki/(.*)$ /WebJobconnect/FormSignup.php?error=$1 [NC,L,QSA]
+
+RewriteRule ^Admin/home$ /WebJobconnect/Admin/home.php [NC,L,QSA]
+RewriteRule ^Admin/home/dang-xuat$ /WebJobconnect/Admin/process_logout.php [NC,L,QSA]
+
+RewriteRule ^Admin/home/danh-sach-quan-tri-vien$ /WebJobconnect/Admin/listAdmin.php [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-ung-vien$ /WebJobconnect/Admin/listCandidates.php [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-nha-tuyen-dung$ /WebJobconnect/Admin/listEmployer.php [NC,L,QSA]
+RewriteRule ^Admin/home/bo-sung-nganh-linh-vuc/(.*)$ /WebJobconnect/Admin/addIndustries.php?error=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/chi-tiet-quan-tri-vien/(.*)$ /WebJobconnect/Admin/detailAdmin.php?IDAdmin=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-ung-vien/chi-tiet-ung-vien/(.*)$ /WebJobconnect/Admin/detailCandidate.php?IDCandi=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-nha-tuyen-dung/chi-tiet-nha-tuyen-dung/(.*)$ /WebJobconnect/Admin/detailEmployer.php?IDEmp=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/chi-tiet-don-ung-tuyen/(.*)$ /WebJobconnect/Admin/detailHoso.php?IDHoso=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/nganh-linhvuc/chi-tiet-nganh-linh-vuc/(.*)$ /WebJobconnect/Admin/detailIndustries.php?ID=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/chi-tiet-tin-tuyen-dung/(.*)$ /WebJobconnect/Admin/detailRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/phan-hoi-ung-vien$ /WebJobconnect/Admin/reviewCandidates.php [NC,L,QSA]
+RewriteRule ^Admin/home/phan-hoi-nha-tuyen-dung$ /WebJobconnect/Admin/reviewEmployer.php [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-tin-tuc/noi-dung/(.*)$ /WebJobconnect/Admin/news.php?IDNews=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/danh-sach-tin-tuc$ /WebJobconnect/Admin/listNews.php [NC,L,QSA]
+RewriteRule ^Admin/home/dang-tin-tuc$ /WebJobconnect/Admin/postNewsForm.php [NC,L,QSA]
+
+
+RewriteRule ^Admin/home/xu-li-bo-sung-quan-tri-vien$ /WebJobconnect/Admin/process_addAdmin.php [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-bo-sung-nganh-linh-vuc$ /WebJobconnect/Admin/process_addIndustries.php [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-xoa-quan-tri-vien/(.*)$ /WebJobconnect/Admin/process_removeAdmin.php?IDAdmin=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-xoa-nganh-linh-vuc/(.*)$ /WebJobconnect/Admin/process_removeIndustries.php?IDremove=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-cap-nhat-thong-tin-QTV/(.*)$ /WebJobconnect/Admin/process_updateAdmin.php [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-cap-nhat-avatar-QTV$ /WebJobconnect/Admin/process_updateImageAd.php [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-cap-nhat-thong-tin-nganh-linh-vuc/(.*)$ /WebJobconnect/Admin/process_updateIndustries.php?IDupdate=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-phan-hoi-ung-vien/(.*)$ /WebJobconnect/Admin/process_replyCandi.php?IDComment=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-phan-hoi-nha-tuyen-dung/(.*)$ /WebJobconnect/Admin/process_replyEmp.php?IDComment=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-xoa-nha-tuyen-dung/(.*)$ /WebJobconnect/Admin/process_removeEmp.php?IDEmp=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-xoa-ung-vien/(.*)$ /WebJobconnect/Admin/process_removeCandi.php?IDCandi=$1 [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-dang-bai$ /WebJobconnect/Admin/process_postNews.php [NC,L,QSA]
+RewriteRule ^Admin/home/xu-li-xoa-tin-tuc/(.*)$ /WebJobconnect/Admin/process_removeNews.php?IDNews=$1 [NC,L,QSA]
+
+
+
+RewriteRule ^Candidate/home$ /WebJobconnect/Candidate/View/home.php [NC,L,QSA]
+RewriteRule ^Candidate/home/chi-tiet-ung-vien/(.*)$ /WebJobconnect/Candidate/View/detailCandidate.php?IDCandi=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-nha-tuyen-dung$ /WebJobconnect/Candidate/View/listEmployer.php [NC,L,QSA]
+RewriteRule ^Candidate/home/don-ung-tuyen/(.*)$ /WebJobconnect/Candidate/View/applicationDoc.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-nha-tuyen-dung/thong-tin-chi-tiet/(.*)$ /WebJobconnect/Candidate/View/detailEmployer.php?IDEmp=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-tin-tuyen-dung/thong-tin-chi-tiet/(.*)$ /WebJobconnect/Candidate/View/detailRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/chi-tiet-don-ung-tuyen/(.*)$ /WebJobconnect/Candidate/View/detailHoso.php?IDHoso=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-don-ung-tuyen$ /WebJobconnect/Candidate/View/listHoso.php [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-nganh-linh-vuc$ /WebJobconnect/Candidate/View/listIndustries.php [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-nganh-linh-vuc/thong-tin-chi-tiet/(.*)$ /WebJobconnect/Candidate/View/detailIndustries.php?ID=$1 [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-tin-tuyen-dung$ /WebJobconnect/Candidate/View/listRecruitment.php [NC,L,QSA]
+RewriteRule ^Candidate/home/phan-hoi-quan-tri-vien$ /WebJobconnect/Candidate/View/reviewAdmin.php [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-ung-vien$ /WebJobconnect/Candidate/View/listCandi.php [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-tin-tuc$ /WebJobconnect/Candidate/View/listNews.php [NC,L,QSA]
+RewriteRule ^Candidate/home/danh-sach-tin-tuc/noi-dung/(.*)$ /WebJobconnect/Candidate/View/news.php?IDNews=$1 [NC,L,QSA]
+
+
+RewriteRule ^Candidate/dang-xuat$ /WebJobconnect/Candidate/Process/process_logout.php [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-xoa-ho-so/(.*)$ /WebJobconnect/Candidate/Process/process_removeHoso.php?IDHoso=$1 [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-them-don-ung-tuyen$ /WebJobconnect/Candidate/Process/process_addHoso.php [NC,L,QSA]
+RewriteRule ^Candidate/them-anh-dai-dien$ /WebJobconnect/Candidate/Process/process_updateImageCandi.php [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-cap-nhat$ /WebJobconnect/Candidate/Process/process_updateCandi.php [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-cap-nhat-don$ /WebJobconnect/Candidate/Process/process_updateHoso.php [NC,L,QSA]
+RewriteRule ^Candidate/them-ung-vien$ /WebJobconnect/Candidate/Process/process_addCandi.php [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-gui-binh-luan$ /WebJobconnect/Candidate/Process/process_sendComment.php [NC,L,QSA]
+RewriteRule ^Candidate/xu-li-gui-binh-luan-tin-tuyen-dung/(.*)$ /WebJobconnect/Candidate/Process/process_sendCommentRec.php?IDRec=$1 [NC,L,QSA]
+
+
+RewriteRule ^Employer/home$ /WebJobconnect/Employer/View/home.php [NC,L,QSA]
+RewriteRule ^Employer/home/chi-tiet-nha-tuyen-dung/(.*)$ /WebJobconnect/Employer/View/detailEmp.php?IDEmp=$1 [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-don-ung-tuyen/thong-tin-chi-tiet/(.*)$ /WebJobconnect/Employer/View/detailHoso.php?IDHoso=$1 [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-tin-tuyen-dung/chi-tiet-tin-tuyen-dung/(.*)$ /WebJobconnect/Employer/View/detailRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-tin-tuyen-dung$ /WebJobconnect/Employer/View/listRecruitment.php [NC,L,QSA]
+RewriteRule ^Employer/home/mau-tin-tuyen-dung$ /WebJobconnect/Employer/View/recruitment.php [NC,L,QSA]
+RewriteRule ^Employer/home/danh-gia-website$ /WebJobconnect/Employer/View/reviewAdmin.php [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-don-ung-tuyen$ /WebJobconnect/Employer/View/listHoso.php [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-nganh-linh-vuc$ /WebJobconnect/Employer/View/listIndustries.php [NC,L,QSA]
+RewriteRule ^Employer/home/danh-sach-nganh-linh-vuc/thong-tin-chi-tiet/(.*)$ /WebJobconnect/Employer/View/detailIndustry.php?IDIndus=$1 [NC,L,QSA]
+
+
+
+
+RewriteRule ^Employer/them-nha-tuyen-dung$ /WebJobconnect/Employer/Process/process_addEmployer.php [NC,L,QSA]
+RewriteRule ^Employer/them-tin-tuyen-dung$ /WebJobconnect/Employer/Process/process_addRecruitment.php [NC,L,QSA]
+RewriteRule ^Employer/dang-xuat$ /WebJobconnect/Employer/Process/process_logout.php [NC,L,QSA]
+RewriteRule ^Employer/xoa-tin-tuyen-dung/(.*)$ /WebJobconnect/Employer/Process/process_removeRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Employer/cap-nhat-thong-tin$ /WebJobconnect/Employer/Process/process_updateEmployer.php [NC,L,QSA]
+RewriteRule ^Employer/cap-nhat-anh-dai-dien$ /WebJobconnect/Employer/Process/process_updateImageEmp.php [NC,L,QSA]
+RewriteRule ^Employer/duyet-ho-so/(.*)$ /WebJobconnect/Employer/Process/process_hoso.php?Tinhtrang=$1 [NC,L,QSA]
+RewriteRule ^Employer/xu-li-gui-danh-gia$ /WebJobconnect/Employer/Process/process_sendComment.php [NC,L,QSA]
+RewriteRule ^Employer/xu-li-phan-hoi-ung-vien/(.*)$ /WebJobconnect/Employer/Process/process_replyCandi.php?IDComment=$1 [NC,L,QSA]
+RewriteRule ^Employer/xu-li-cap-nhat-tin-tuyen-dung/(.*)$ /WebJobconnect/Employer/Process/process_updateRec.php?IDRec=$1 [NC,L,QSA]
+RewriteRule ^Employer/xu-li-them-hinh-anh$ /WebJobconnect/Employer/Process/process_addmultiImages.php [NC,L,QSA]
+
+
+RewriteBase /WebJobconnect/
+
+# Kiểm tra xem file hoặc thư mục có tồn tại không
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Chuyển hướng các trang không tồn tại đến file 404.php
+RewriteRule ^(.*)$ /Error404/404.php [NC,L,QSA]
+

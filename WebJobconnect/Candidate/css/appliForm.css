@@ -1,0 +1,28 @@
+#item{
+    border-radius: 20px;
+    border: 2px solid #dc3545;
+    margin: 10px 0 10px 95px;
+    padding: 10px;
+    width: auto;
+}
+#item span{
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color:black;
+}
+#item p{
+    padding: 10px 0 0 10px;
+    font-size: smaller;
+    font-style: italic;
+}
+#item div{
+    float: right;
+}
+#item div a{
+    margin: 0 10px 10px 10px;
+}
+#item div p{
+    font-size: medium;
+    color:#dc3545;
+}
